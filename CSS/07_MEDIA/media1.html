@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding: 0px;
+    }
+   body{
+    background-color: palevioletred;
+   }
+   
+    nav ul{
+        background-color: black;
+        color: white;
+        display: flex;
+        list-style-type: none;
+        padding :10px;
+        justify-content: flex-end;
+        gap:20px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    @media screen and (max-width:500px){
+       
+      body{
+        background-color: cyan;
+      }
+    }
+    @media screen and (max-width :1000px){
+
+body{
+  background-color:cyan;
+}
+  
+}
+    
+    @media screen and (max-width :800px){
+
+      body{
+        background-color: cyan;
+      }
+        
+    }
+</style>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home<li>
+      <li><a href="#">About<li>
+      <li><a href="#">Contact<li>
+     <ul>
+   <nav>
+   
+    
+</body>
+</html>
+
+
+<!-- 
+Explanation :
+The background color of the body is set to palevioletred by default. The navigation bar is a horizontal list with a black background, white text, and some padding between list items. The font size for navigation links is set to 20px.There are three media queries defined in the CSS. One sets the background color of the body to cyan when the screen width is less than or equal to 500px. Another sets the background color of the body to cyan when the screen width is between 501px and 800px. The third sets the background color of the body to cyan when the screen width is between 801px and 1000px. -->

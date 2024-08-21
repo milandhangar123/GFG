@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="myTemplate">
+        <div>
+            <h2>This is a Product</h2>
+            <p>It can contain any description</p>
+        </div>
+    </template>
+</body>
+<script>
+    var template = document.getElementById('myTemplate');
+    var product1 = document.importNode(template.content, true);
+    product1.querySelector('h2').textContent='Product 1'
+    var product2 = document.importNode(template.content, true);
+    product2.querySelector('h2').textContent='Product 2'
+
+    document.body.appendChild(product1);
+    document.body.appendChild(product2);
+</script>
+</html>
+
+<!-- 
+Explanation :
+
+The html code defines a template element with the ID myTemplate. This template element contains a heading element (<h2>) with the text "Hello World", 
+and a paragraph element (<p>) with the text "This is a pg".In the JavaScript code, a constant named data is defined with two properties: title and 
+description.Then, the template element is retrieved using the getElementById method and stored in the template constant. The content of the template element
+is then cloned using the cloneNode method with the true argument to make a deep copy. This creates a new document fragment that is an exact copy of the 
+template's content.The querySelector method is used to select the h2 and p elements within the cloned content. The innerHTML property of these elements is
+then set to the corresponding values of the data object.Finally, the modified content is appended to the body element using the appendChild method, effectively
+adding the template to the DOM.
+-->
+
+<!-- JavaScript Quick Reference :
+JavaScript is a programming language that is commonly used to create interactive effects on web pages. Here are some basic JavaScript concepts and methods:
+
+const: The const keyword is used to declare a constant variable that cannot be reassigned a new value. For example, const PI = 3.14.
+getElementById: The getElementById method is used to get an element by its ID attribute. For example, document.getElementById("myButton") would return the element with the ID "myButton".
+querySelector: The querySelector method is used to get the first element that matches a specified CSS selector. For example, document.querySelector(".myClass") would return the first element with the class "myClass".
+appendChild: The appendChild method is used to append a new child element to an existing element. For example, document.getElementById("myList").appendChild(newListItem) would append a new list item to the element with the ID "myList".
+cloneNode: The cloneNode method is used to create a duplicate of an existing element. For example, var clonedNode = document.getElementById("myElement").cloneNode(true) would create a copy of the element with the ID "myElement" and all of its children. The true argument specifies that all child nodes should be cloned as well. -->

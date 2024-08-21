@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getUserLocation()">Get my location</button>
+    <div id="location"></div>
+</body>
+<script>
+    function getUserLocation(){
+        alert("hello")
+        if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition,showError)
+        }
+        else{
+            document.getElementById("location").innerHTML="Geolocation is not supported by this browser"
+        }
+    }
+    function showPosition(position){
+        document.getElementById("location").innerHTML="Latitude"
+        +position.coords.latitude+"<br>"+"Longitude:"+position.coords.longitude
+
+    }
+    function showError(error){
+        console.log(error)
+        document.getElementById("location").innerHTML="Error:"+ error.message 
+        
+
+    }
+</script>
+</html>
+
+<!-- 
+Explanation :
+The code starts by defining an HTML button with an onclick event listener that will execute the getUserLocation() function when clicked. The getUserLocation() function first checks if the browser supports the Geolocation API using the navigator.geolocation object. If the API is supported, it calls the getCurrentPosition() method and passes two callback functions as arguments: showPosition and showError. The showPosition() function is called if the location is successfully retrieved, and it updates the innerHTML of the location element with the latitude and longitude values obtained from the position object.If there is an error retrieving the location, the showError() function is called, which logs the error to the console and updates the location element with the error message.When the user clicks the "Get my location" button, the browser will prompt the user to allow or deny access to their location information. If the user grants permission, the getCurrentPosition() method will attempt to retrieve the location information and call the appropriate callback function. If the user denies permission or if there is an error retrieving the location information, the showError() function will be called instead.
+
+  -->

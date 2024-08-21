@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .box{
+    width: 200px;
+    height: 100px;
+    background-color: palevioletred;
+    padding: 15px 5px;
+    border: 4px solid purple;
+    margin: 30px;
+   }
+   .inline_box{
+    background-color: pink;
+   }
+   .block_box{
+    background-color: plum;
+   }
+   .inline_box,.block_box{
+    width: 200px;
+    height: 100px;
+    padding: 15px;
+    border: 5px solid palegreen;
+    margin: 10px;
+    box-sizing: border-box;
+   }
+</style>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor, sit amet consectetur</p>
+    </div>
+    <br><br>
+    <span class="inline_box">Inline Element</span>
+    <div class="block_box">Block Element</div>
+</body>
+</html>
+
+<!-- 
+Explanation :
+The CSS code starts with defining some styles for a box. The class name of the box is "box". The box has a width of 200 pixels, height of 100 pixels, palevioletred background color, 15 pixels padding on the top and bottom, 5 pixels padding on the left and right, 4 pixels purple border, and 30 pixels margin from all sides.The next two classes are "inline_box" and "block_box". These two classes are used to define styles for two different types of HTML elements: inline and block elements.Both "inline_box" and "block_box" have a width of 200 pixels, height of 100 pixels, 15 pixels padding on all sides, 5 pixels palegreen border, and 10 pixels margin from all sides. However, they have different background colors: pink for the "inline_box" and plum for the "block_box".After defining the styles, the HTML code includes three elements: a box with the "box" class, a span with the "inline_box" class, and a div with the "block_box" class. The box element contains a paragraph with some text. The span and div elements are used to demonstrate the difference between inline and block elements.The span element is an inline element, which means that it does not start on a new line and only takes up as much width as necessary. The div element is a block element, which means that it starts on a new line and takes up the full width available. -->

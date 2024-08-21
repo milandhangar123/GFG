@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hb{
+        background-color: palevioletred;
+        color: bisque;
+        padding: 10px 20px;
+        border: none;
+    }
+    .hb:hover{
+        background-color: palegreen;
+        color: black;
+        transition:all 1.5s ease-in-out;
+        font-size: 25px;
+        transform:translateX(50px) translateY(30px) scale(1.5) rotate(45deg);
+    }
+</style>
+<body>
+    <button class="hb">Hover Me !</button>
+</body>
+</html>
+
+<!-- Explanation :
+In this code we create a button with a class "hb". The button has a background color of "palevioletred" and text color of "bisque", with padding and no border.When the button is hovered over, it changes its background color to "palegreen", text color to "black", and also undergoes a transition effect with the transition property set to "all 1.5s ease-in-out".There are four transform functions applied on the button when it is hovered over, which include: "translateX(50px)", "translateY(30px)", "scale(1.5)", and "rotate(45deg)".So when the button is hovered over, it moves 50px to the right and 30px down from its original position, scales up by a factor of 1.5, and rotates 45 degrees. -->

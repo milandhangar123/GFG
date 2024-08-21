@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   *{
+    margin: 0;
+    padding: 0;
+   }
+   .container{
+    background-color: aquamarine;
+    max-width: 800px;
+    max-height: 400px;
+   }
+   .container p{
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    border: 1px solid black;
+    box-sizing: border-box;
+   }
+   .flexcount{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+
+/* 
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: space-evenly; */
+
+    /* align-items: center;
+    align-items:  stretch;
+    align-items: flex-end;
+    align-items: flex-start;
+    align-items: baseline; */
+
+    /* flex-wrap: wrap; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    align-self: center;
+    
+
+    
+   }
+   
+  
+</style>
+<body>
+    <div class="container flexcount">
+        <p>Hey</p>
+        <p>THere</p>
+        <p>how</p>
+        <p>are</p>
+        <p>you</p>
+    </div>
+</body>
+</html>
+<!-- 
+
+Explanation :
+In this code, there is a container with a class name "containerflexcount", which has a maximum width of 800 pixels and a minimum height of 400 pixels.The container has the following flex properties:
+
+display: flex: This property sets the container to use flexbox layout.
+flex-direction: row-reverse: This property sets the direction of the main axis to be in reverse order horizontally, which means the elements are displayed from right to left.
+justify-content: space-between: This property aligns the elements with equal space between them along the main axis.
+align-items: flex-start: This property aligns the items to start from the cross-axis which is vertical in this case.
+flex-wrap: wrap: This property wraps the items into the next line when there is no more space on the current line.-->
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container1{
+        display: grid;
+        width: 400px;
+        height: 600px;
+        grid-template-columns: repeat(3,100px);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 10px;
+        border: 1px solid black;
+        justify-items: start;
+        align-items: start;
+        justify-content: start;
+        align-content: center;
+    }
+    .item1{
+        background-color: plum;
+        color: darkmagenta;
+        padding: 20px;
+        font-size: 30px;
+    }
+    .container2{
+        display: grid;
+        grid-template-columns: minmax(100px,1fr);
+        grid-template-rows: repeat(3,100px);
+        grid-gap: 10px;
+        border: 1px solid black;
+    }
+    .item2{
+        background-color: rgb(165, 160, 221);
+        color: rgb(14, 0, 139);
+        padding: 20px;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <div class="container1">
+        <div class="item1">1</div>
+        <div class="item1">2</div>
+        <div class="item1">3</div>
+        <div class="item1">4</div>
+        <div class="item1">5</div>
+        <div class="item1">6</div>
+        <div class="item1">7</div>
+        <div class="item1">8</div>
+        <div class="item1">9</div>
+    </div>
+
+    <br><br>
+<div class="container2">
+    <div class="item2">1</div>
+    <div class="item2">2</div>
+    <div class="item2">3</div>
+    <div class="item2">4</div>
+    <div class="item2">5</div>
+    <div class="item2">6</div>
+</div>
+</body>
+</html>
+
+
+<!-- 
+justify-content,align-items,justify-items,align-content
+ 
+
+Explanation :
+container1: This container has a display of grid and a width and height of 400px and 600px respectively. It has three rows and three columns with a gap of 10px between the rows and columns. The grid items are set to start from the top left of the grid using justify-items and align-items properties. The content is aligned to the center vertically using align-content property and justified to the start horizontally using justify-content property.
+container2: This container has a display of grid. It has one column with a minimum width of 100px and a maximum width of 1fr. It has three rows and a gap of 10px between the rows. The grid items are set to start from the top left of the grid using justify-items and align-items properties. -->

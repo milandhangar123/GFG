@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 10px;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+nav ul li{
+    list-style: none;
+}
+.styled_link:link{
+    color: aquamarine;
+    text-decoration: underline;
+}
+.styled_link{
+    color: bisque;
+    text-decoration: none;
+    transition: all 2.3s ease-in-out;
+}
+.styled_link:visited{
+    color: greenyellow;
+}
+.styled_link:hover{
+    color: rebeccapurple;
+    background-color: blanchedalmond;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 20px;
+}
+nav img{
+    width: 30px;
+}
+
+/* 
+Explanation :
+The nav element is first styled to be a flex container with black background color, 10px padding, and centered items. The ul element inside the nav is also styled to be a flex container with white color text and a gap of 10px between its child li elements which have their list-style removed.
+
+The .styled_link:link selector is used to style unvisited links with an aquamarine color and underline text decoration. The .styled_link selector is used to style links in general with a bisque color and no text decoration. The transition property is added to create a smooth animation effect when changing the styles of the links.
+
+The .styled_link:visited selector is used to style visited links with a green-yellow color. The .styled_link:hover selector is used to style links when they are hovered over with the mouse. This includes changing the color to rebeccapurple, adding a background color of blanchedalmond, increasing the font size to 12px, adding 5px of padding, and applying a 20px border radius.The nav img selector is used to style any img element inside the nav with a width of 30px.
+
+ */

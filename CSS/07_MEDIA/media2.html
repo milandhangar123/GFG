@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding: 0px;
+    }
+   
+   
+    nav ul{
+        background-color: black;
+        color: white;
+        display: flex;
+        list-style-type: none;
+        padding :10px;
+        justify-content: flex-end;
+        gap:20px;
+    }
+    nav ul li a {
+        font-size: 20px;
+        
+        color: whitesmoke;
+        text-decoration: none;
+    }
+    @media screen and (max-width:500px){
+       nav ul{
+        flex-direction: column;
+        align-items: center;
+       } 
+    }
+    .gcon{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .gitem{
+        background-color: palevioletred;
+        padding: 20px;
+        font-size: 30px;
+        border: 2px;
+    }
+    @media screen and (max-width :800px){
+        .gcon{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4,1fr);
+            border: 2px;
+        }
+        
+    }
+</style>
+<body>
+   <div class="gcon">
+    <div class="gitem">1</div>
+    <div class="gitem">2</div>
+    <div class="gitem">3</div>
+    <div class="gitem">4</div>
+    <div class="gitem">5</div>
+    <div class="gitem">6</div>
+   </div>
+    
+</body>
+</html>
+
+
+<!-- 
+Explanation :
+In this example, there are two media queries:
+
+The first media query is applied when the screen width is less than or equal to 500px. In this case, the flex-direction and align-items properties of the nav ul element are changed to column and center, respectively. This will result in the navigation bar appearing vertically centered on the page.
+The second media query is applied when the screen width is less than or equal to 800px. In this case, the display, grid-template-columns, and border properties of the .gcon class are changed. This will result in the grid displaying with four columns instead of three and a border being added.
+The rest of the code sets some basic styles for the page, including a background color, font size, and padding. There is also a grid container with six grid items that will be arranged in a grid layout.
+
+ -->

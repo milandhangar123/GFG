@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="enter product name" type="text" id="productname">
+    <input placeholder="enter product price" type="number" id="productprice">
+    <button onclick="addProductToCart()">Add to cart</button>
+    <div id="output"></div>
+</body>
+<script>
+    function showCart(){
+        let cart=localStorage.getItem("cart")
+        cart=JSON.parse(cart)
+        let output=document.getElementById("output")
+        if (cart==null||cart.length==0){
+            output.innerHTML="<h1>cart is empty</h1>"
+        }
+        else{
+            let table="<table border='1'>";
+                table+="<tr><th>Product Name</th><th>Product Price</th></tr>"
+                for (let i=0;i<cart.length;i++){
+                    table+="<tr><td>"+cart[i].name+"</td><td>"+cart[i].price+"</td></tr>"
+                }
+                table+="</table>"
+                output.innerHTML=table
+        }
+    }
+    function addProductToCart(){
+        let cart=localStorage.getItem("cart")
+        if(cart==null){
+            cart=[]
+        }
+        else{
+            cart=JSON.parse(cart)
+        }
+        let productname=document.getElementById("productname").value
+        let productprice=document.getElementById("productprice").value
+        let product={
+            name:productname,
+            price:productprice
+        }
+        cart.push(product)
+        localStorage.setItem("cart",JSON.stringify(cart))
+        showCart()
+    }
+    showCart()
+</script>
+</html>
+
+<!-- 
+Explanation :
+In the code, the Local Storage API is used to create a shopping cart feature for an online store. The code allows users to add products to the cart and displays the current contents of the cart on the page.The localStorage object is used to store and retrieve data from the browser's local storage space. The JSON.stringify() method is used to convert the cart array into a string before storing it, and JSON.parse() is used to convert the string back to an array when retrieving the data.The showCart() function retrieves the cart data from local storage and displays it in an HTML table on the page. If the cart is empty, a message is displayed instead.The addProductToCart() function creates a new product object with the name and price entered by the user, adds it to the cart array, and updates the cart data stored in local storage. Finally, the showCart() function is called to update the cart display on the page. -->

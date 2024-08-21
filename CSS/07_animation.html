@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 600px;
+        height: 600px;
+        background-color: aqua;
+    }
+    .box{
+        background-color: plum;
+        width: 100px;
+        height: 100px;
+        animation-name: myanimation1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      
+    }
+    .box:hover{
+        animation-play-state: paused;
+    }
+    @keyframes myanimation1{
+        0%{
+            background-color: paleturquoise;
+            transform:translate(0px,0px);
+        }
+        100%{
+            background-color: rgb(72, 64, 156);
+            transform:translate(0px,0px);
+        }
+        25%{
+            background-color: rgb(37, 183, 54);
+            transform:translate(400px,0px);
+        }
+        50%{
+            background-color: rgb(180, 193, 31);
+            transform:translate(400px,400px);
+        }
+        75%{
+            background-color: rgb(194, 124, 31);
+            transform:translate(0px,400px);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+Explanation :
+The code defines a CSS animation with keyframes and applies it to a box element. The animation changes the background color and position of the box, using the translate() function to move it around the container. The animation has a duration of 2 seconds and infinite iteration count. The animation play state is paused when the box is hovered over. The container has a fixed width and height with a background color of aqua. -->

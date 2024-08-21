@@ -1,0 +1,53 @@
+
+    .html{font-size: 10px;}
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .container1{
+        font-size: 10px;
+        background-color: pink;
+        width: 50%;
+    }
+    .absolute_px{
+        font-size: 50px;
+        background-color: plum;
+        width: 100vh;
+    }
+    .relative_em{
+        font-size: 2em;
+    }
+    body{
+        font-size: 10px;
+    }
+    .relative_rem{
+        font-size: 1.5rem;
+    }
+    .widthch{
+        width: 10ch;
+    }
+    h1{
+        background-color: palevioletred;
+
+    }
+    .container2{
+        height: 50vh;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+/* 
+Explanation :
+The .html class specifies a font size of 10 pixels for the entire document.
+The * selector applies the margin and padding properties to all elements in the document.
+The .container1 class applies a pink background color and 50% width to a container element.
+The .absolute_px class applies a font size of 50 pixels, a plum background color, and a width of 100 viewport height units to a paragraph element.
+The .relative_em class applies a font size of 2 times the parent element's font size (which is 10 pixels), and does not specify a background color or width.
+The .relative_rem class applies a font size of 1.5 times the root element's font size (which is also 10 pixels), and does not specify a background color or width.
+The .widthch class sets a width of 10 characters to a paragraph element.
+The <h1> tag specifies a palevioletred background color for the text inside the heading.
+The .container2 class sets a height of 500 viewport height units, a palegreen background color, and centers the content horizontally and vertically within the container.
+  */

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .con{
+        width: 700px;
+        height: 500px;
+        background-color: peru;
+        position: relative;
+    }
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: purple;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 15px;
+    }
+    .box2{
+        width: 90px;
+        height: 90px;
+        background-color: rgb(38, 120, 51);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 10px;
+    }
+</style>
+<body>
+    <div class="con">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
+<!--
+
+Explanation :
+The code defines a container with class "con" that has a fixed width and height, and a background color of "peru". Inside this container, there are two boxes with class "box1" and "box2".
+"box1" has a width and height of 200px and a background color of "purple". It is positioned absolutely with respect to the container's top-left corner using the "top" and "left" properties. It has a z-index of 15, which means it will be stacked on top of "box2".
+"box2" has a width and height of 90px and a background color of "rgb(38, 120, 51)". It is also positioned absolutely with respect to the container's top-left corner. It has a z-index of 10, which means it will be stacked behind "box1".
+The stacking order of elements is determined by their z-index values. Elements with higher z-index values will be stacked on top of elements with lower z-index values. If two elements have the same z-index, the element that appears later in the HTML markup will be stacked on top.
+ 
+ -->
+

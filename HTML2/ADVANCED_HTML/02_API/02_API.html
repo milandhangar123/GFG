@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file" id="fileInput" onchange="displayFileData()"/>
+    <div id="output"></div>
+</body>
+<script>
+    function displayFileData(){
+        var file=document.getElementById("fileInput")
+        console.log(fileInput.files[0])
+        var filedata=fileInput.files[0]
+        var output=document.getElementById("output")
+        output.innerHTML=
+        "File Name : " +filedata.name+"<br>"+
+        "File Type : " +filedata.type+"<br>"+
+        "File Size : " +filedata.size
+    }
+</script>
+</html>
+
+<!-- 
+Explanation :
+In the code, there is an HTML input element of type "file" that allows the user to select a file from their computer. When the user selects a file, 
+the "onchange" event is triggered, which calls the "displayFileData()" function. This function retrieves the selected file using the "getElementById()" method 
+and the "files" property. It then accesses the file properties such as "name", "type" and "size" using the "File" object.Finally, the file properties are displayed 
+in a "div" element with the id "output". The "innerHTML" property of the "div" element is set to a string that includes the file name, type, and size information. -->

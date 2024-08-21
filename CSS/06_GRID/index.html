@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        display: grid;
+        margin: 20px;
+        grid-gap: 10px;
+        width: 800px;
+        height: 400px;
+        /* background-color: aqua; */
+        grid-template-columns: 1fr 1fr 1fr; 
+        /* grid-template-columns: 100px 200px 300px; */
+        /* grid-template-rows: 50px 150px 50px; */
+        grid-template-rows: 1fr 2fr 1fr;
+        border: 2px solid black;
+
+
+    }
+    .item{
+        background-color: #444;
+        color: white;
+        padding: 10px;
+        font-size: 30px;
+
+    }
+    .item:nth-child(1){
+        grid-column: 1/4;
+        background-color: greenyellow;
+
+    }
+    .item:nth-child(2){
+        grid-column: 1/2;
+        background-color: blue;
+    }
+    .item:nth-child(3){
+        grid-column: 2/4 ;
+        background-color: pink;
+    }
+    .item:nth-child(4){
+        grid-column: 1/4;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="item">1 Navbar</div>
+        <div class="item">2 sidebar</div>
+        <div class="item">3 content</div>
+        <div class="item">4 footer</div>
+    </div>
+    <!-- 
+    navbar navbar navbar
+    sidebar sidebar sidebar
+    footer footer footer
+     -->
+</body>
+</html>
+
+<!-- 
+Explanation :
+CSS Properties Used :
+
+The .container class defines the grid container with the display property set to grid.
+The grid-gap property defines the gap between the grid cells.
+The grid-template-columns property defines the number and size of columns in the grid.
+The grid-template-rows property defines the number and size of rows in the grid.
+The .item class defines the styling for each grid item.
+The nth-child() selector is used to select the specific grid item based on its position in the grid.
+The grid-column property is used to place each item in the grid.
+In the given code :
+
+The grid-template-columns property has been defined twice, with the first declaration being overridden by the second. The second declaration uses the repeat() function to specify the number of columns, and the 1fr unit to divide the available space equally among them.
+The first item in the grid (the navbar) has been set to span across all three columns using the grid-column property with a value of 1/4.
+The second item in the grid (the sidebar) has been set to span across the first column only using the grid-column property with a value of 1/2.
+The third item in the grid (the content) has been set to span across the second and third columns using the grid-column property with a value of 2/4.
+The fourth item in the grid (the footer) has been set to span across all three columns using the grid-column property with a value of 1/4, similar to the navbar. -->

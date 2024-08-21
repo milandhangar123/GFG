@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+display: grid;
+grid-template-columns: 1fr 3fr;
+
+grid-template-areas:
+"header header"
+"sidebar content"
+"footer footer";
+/* grid-template-areas: ; */
+}
+.item {
+border-radius: 5px;
+padding: 20px;
+font-size: 150%;
+}
+.header {
+grid-area: header;
+background-color: rgb(210, 98, 98);
+color: rgb(76, 8, 8);
+}
+.sidebar {
+grid-area: sidebar;
+background-color: #00a8cc;
+}
+.content {
+    grid-area: content;
+    background-color: aquamarine;
+}
+.footer{
+    grid-area: footer;
+    background-color: darkkhaki;
+}
+@media(max-width:768px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 100px 300px 200px;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "content"
+        "footer";
+        grid-auto-rows: 500px;
+    }
+}
+    
+</style>
+<body>
+    <div class="container">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Content</div>
+        <div class="item footer">Footer</div>
+    </div>
+</body>
+</html>
+
+
+<!-- 
+Explanation :
+grid-template-columns: The grid has two columns: one that takes up 1 fraction of the available space, and another that takes up 3 fractions of the available space.
+grid-template-areas: There are 3 rows and 2 columns, and the header, sidebar, content, and footer are all given named grid areas that can be referenced later in the code.
+.header, .sidebar, .content, and .footer: These are class selectors that are used to style specific grid items that correspond to the named grid areas defined earlier.
+grid-area: This property is used to place a grid item within a named grid area defined by grid-template-areas.
+@media(max-width:768px): This is a media query that targets a specific screen size (less than or equal to 768px). Within this media query, the grid is redefined using grid-template-rows, grid-template-areas, and grid-auto-rows to create a different layout for smaller screens.
+grid-template-rows: This defines the number and size of rows in the grid for small screens. There are 4 rows with specific heights of 100px, 300px, 200px, and a default height of 500px for any additional rows.
+grid-template-areas: This redefines the grid areas for small screens to take up the full height of the screen.
+grid-auto-rows: This defines the height of any additional rows that are added dynamically to the grid. In this case, any additional rows will have a height of 500px -->

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .containerflexcount{
+        background-color: aquamarine;
+        max-width: 800px;
+        min-height: 400px;
+    }
+    .containerflexcount p{
+        background-color: rosybrown;
+        color: black;
+        font-size: 25px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+    .containerflexcount{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+    }
+    p{
+        width: 350px;
+        height: 70px;
+    }
+    p:nth-child(2){
+        flex-grow: 2;
+        flex-shrink: 2;
+        flex-basis: 100px;
+    }
+    p:nth-child(1){
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100px;
+    }
+
+</style>
+<body>
+    <div class="containerflexcount">
+        <p>Hey</p>
+        <p>THere</p>
+        <p>how</p>
+        <p>are</p>
+        <p>you</p>
+    </div>
+</body>
+</html>
+
+<!-- 
+
+Explanation :
+The CSS styles defined in the document use the Flexbox layout to position the child elements within the container element. 
+
+display: flex; sets the container element to use Flexbox layout.
+flex-direction: row-reverse; sets the direction of the Flexbox layout to be from right to left, instead of the default left to right.
+justify-content: space-between; positions the child elements with equal space between them and flush with the left and right edges of the container element.
+align-items: flex-start; aligns the child elements to the top of the container element.
+flex-wrap: wrap; allows the child elements to wrap onto a new line if necessary when there is not enough space for all of them in a single row.
+The p elements also have specific Flexbox properties applied to them:
+
+width: 350px; sets the width of each p element to 350 pixels.
+height: 70px; sets the height of each p element to 70 pixels.
+flex-grow: 2; makes the second p element twice as large as the other p elements.
+flex-shrink: 2; allows the second p element to shrink to half its size if there is not enough space for all the elements.
+flex-basis: 100px; sets the base size of the second and first p element to 100 pixels before any extra space is added by the flex-grow property. -->

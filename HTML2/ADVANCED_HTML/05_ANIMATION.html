@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(2, 28, 20);
+        display: flex;
+        align-items: center;
+        color: black;
+        justify-content: center;
+        height: 100vh;
+    }
+    canvas{
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+       
+    }
+</style>
+<body>
+    <canvas id="canvas" width="500" height="500"></canvas>  
+</body>
+<script>
+    const canvas=document.getElementById("canvas")
+    const ctx=canvas.getContext('2d')
+    
+    const circle={
+        x:300,
+        y:300,
+        radius:40,
+        dx:5,
+        dy:4
+    }
+    function drawcircle(){
+        ctx.beginPath()
+        ctx.arc(circle.x,circle.y,circle.radius,0,Math.PI*2)
+        ctx.fillStyle="pink"
+        ctx.fill()
+    }
+    drawcircle()
+    function update(){
+        //ctx.clearRect(0,0,canvas.width,canvas.height)
+        drawcircle()
+        circle.x+=circle.dx
+        circle.y+=circle.dy
+        if (circle.x+circle.radius>canvas.width||circle.x-circle.radius<0){
+            circle.dx*=-1
+        }
+        if (circle.y+circle.radius>canvas.height||circle.y-circle.radius<0){
+            circle.dy*=-1
+        }
+        requestAnimationFrame(update)
+    }
+    update()
+</script>
+</html>
+
+
+<!-- 
+Explanation :
+This is an HTML code that displays a canvas element, which is a rectangular area on the screen where graphics can be drawn using JavaScript. The canvas has a width and height of 500 pixels.In the CSS section, the code sets some styles for the canvas, including a border-radius of 5 pixels, and a background color of white.In the JavaScript section, the code gets a reference to the canvas element and its context, which is a 2D rendering context.The code defines an object named circle that represents a circle that will be drawn on the canvas. The circle has an initial position of (300,300), a radius of 40 pixels, and a velocity represented by the dx and dy properties.The code defines a function named drawcircle() that uses the context to draw the circle on the canvas with a pink color.The code defines a function named update() that updates the position of the circle and redraws it on the canvas using requestAnimationFrame() method. The requestAnimationFrame() method provides a smooth animation by taking the most optimal amount of time to redraw the canvas.The update function also checks if the circle hits the edge of the canvas and reverses the direction of the velocity if it does.
+
+
+
+ -->
